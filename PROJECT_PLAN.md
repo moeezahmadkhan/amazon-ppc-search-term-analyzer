@@ -67,6 +67,10 @@ amazon-ppc-analyzer/
 │       └── generate_dummy_data.py
 ├── frontend/                     # Next.js + Tailwind (Step 3)
 │   └── ...
+├── mlend/                        # NLP layer - natural language to pandas queries (Step 5)
+│   ├── __init__.py
+│   ├── query_parser.py          # LLM API integration for parsing user text
+│   └── requirements.txt         # openai, etc.
 └── README.md
 ```
 
