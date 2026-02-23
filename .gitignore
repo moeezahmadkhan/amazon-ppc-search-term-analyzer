@@ -33,4 +33,18 @@ temp/
 
 # Runtime
 .run/pids/
+.run/logs/
 .env.local
+
+# Environment files
+.env
+.env.*
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
+mlend/.env
+mlend/.env.*
+!.env.example
+!backend/.env.example
+!frontend/.env.example

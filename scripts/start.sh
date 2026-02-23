@@ -68,6 +68,7 @@ BACKEND_CORS_ORIGINS="${BACKEND_CORS_ORIGINS:-$(yaml_get backend_cors_origins "$
 FRONTEND_HOST="${FRONTEND_HOST:-$(yaml_get frontend_host "$CONFIG_FILE")}"
 FRONTEND_PORT="${FRONTEND_PORT:-$(yaml_get frontend_port "$CONFIG_FILE")}"
 NEXT_PUBLIC_API_URL="${NEXT_PUBLIC_API_URL:-$(yaml_get frontend_public_api_url "$CONFIG_FILE")}"
+OPENAI_MODEL="${OPENAI_MODEL:-$(yaml_get openai_model "$CONFIG_FILE")}"
 
 BACKEND_PID_FILE="$PID_DIR/backend.pid"
 FRONTEND_PID_FILE="$PID_DIR/frontend.pid"
@@ -85,6 +86,7 @@ else
     (
       cd "$ROOT_DIR/backend"
       BACKEND_CORS_ORIGINS="$BACKEND_CORS_ORIGINS" \
+      OPENAI_MODEL="$OPENAI_MODEL" \
       nohup uvicorn app.main:app \
         --host "$BACKEND_HOST" \
         --port "$BACKEND_PORT" \

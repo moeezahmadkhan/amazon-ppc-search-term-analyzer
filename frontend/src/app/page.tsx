@@ -7,6 +7,7 @@ import type { Thresholds } from "@/components/ThresholdSliders";
 import ResultsPanel from "@/components/ResultsPanel";
 import type { CategoryResult } from "@/components/ResultsPanel";
 import DownloadButtons from "@/components/DownloadButtons";
+import NlpFilterPanel from "@/components/NlpFilterPanel";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001";
 
@@ -155,11 +156,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Column: Results */}
-          <div className="lg:col-span-8">
-            <div className="bg-card rounded-xl border border-card-border p-6 min-h-[400px]">
+          {/* Right Column: Results + NLP */}
+          <div className="lg:col-span-8 space-y-6">
+            <div className="bg-card rounded-xl border border-card-border p-6 min-h-[320px]">
               <ResultsPanel results={results} isLoading={isLoading} />
             </div>
+            <NlpFilterPanel sessionId={sessionId} apiBase={API_BASE} />
           </div>
         </div>
       </main>

@@ -4,3 +4,4 @@ xlsxwriter
 fastapi
 uvicorn[standard]
 python-multipart
+openai
