@@ -8,7 +8,7 @@ import ResultsPanel from "@/components/ResultsPanel";
 import type { CategoryResult } from "@/components/ResultsPanel";
 import DownloadButtons from "@/components/DownloadButtons";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001";
 
 const DEFAULT_THRESHOLDS: Thresholds = {
   click_threshold: 10,

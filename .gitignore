@@ -30,3 +30,7 @@ Thumbs.db
 *.log
 tmp/
 temp/
+
+# Runtime
+.run/pids/
+.env.local

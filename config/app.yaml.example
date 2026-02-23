@@ -1,0 +1,10 @@
+app_name: amazon-ppc-search-term-analyzer
+environment: development
+
+backend_host: 0.0.0.0
+backend_port: 8001
+backend_cors_origins: http://localhost:3000,http://127.0.0.1:3000
+
+frontend_host: 0.0.0.0
+frontend_port: 3000
+frontend_public_api_url: http://localhost:8001
