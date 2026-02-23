@@ -1,0 +1,6 @@
+pandas
+openpyxl
+xlsxwriter
+fastapi
+uvicorn[standard]
+python-multipart
