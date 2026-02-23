@@ -21,7 +21,8 @@ load_env_file() {
 yaml_get() {
   local key="$1"
   local yaml_file="$2"
-  awk -F': *' -v k="$key" '$1 == k {print $2; exit}' "$yaml_file" | sed 's/"//g' | sed "s/'//g"
+  # Parse "key: value" while preserving colons inside value (e.g., URLs).
+  sed -n "s/^${key}:[[:space:]]*//p" "$yaml_file" | head -n1 | sed 's/"//g' | sed "s/'//g"
 }
 
 is_pid_running() {
